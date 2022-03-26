@@ -30,6 +30,9 @@ class CountryController(
     fun searchCountries(@RequestParam("prefix") prefix: String): List<CountryDto> =
         countryService.search(prefix)
 
+    @GetMapping("/names")
+    fun getCountryNames(): List<String> = countryService.getCountryNames()
+
     @PostMapping
     fun create(@RequestBody dto: CountryDto): Int = countryService.create(dto)
 
