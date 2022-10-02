@@ -3,7 +3,7 @@
 
 Таблица стран:
 
-```kotlin
+```sql
 create table country
 (
     id         serial constraint country_pk primary key,
@@ -14,7 +14,7 @@ create table country
 
 Таблица городов, связанных со странами:
 
-```kotlin
+```sql
 create table city
 (
     id         serial constraint city_pk primary key,
