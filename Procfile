@@ -1,0 +1,1 @@
+web: java -jar build/libs/spring-jpa-rest-kotlin-1.1.0.jar
