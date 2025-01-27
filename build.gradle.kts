@@ -22,6 +22,37 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     runtimeOnly("org.postgresql:postgresql")
+    implementation("jakarta.validation:jakarta.validation-api:3.0.2")
+    implementation("org.hibernate.validator:hibernate-validator:8.0.0.Final")
+    implementation("org.glassfish:jakarta.el:4.0.2")
+}
+
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "trood.SpringJpaRestKotlinApplicationKt" // Укажите путь к вашему главному классу
+        )
+    }
+}
+
+tasks.register<Jar>("fatJar") {
+    group = "build"
+    description = "Assembles a fat JAR with all dependencies"
+
+    archiveClassifier.set("fat")
+
+    manifest {
+        attributes["Main-Class"] = "trood.SpringJpaRestKotlinApplicationKt"
+    }
+
+    from(sourceSets.main.get().output)
+
+    dependsOn(configurations.runtimeClasspath)
+    from({
+        configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
+    })
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE // Исключает дублирующиеся файлы
 }
 
 tasks.withType<KotlinCompile> {

@@ -1,4 +1,4 @@
-package ru.devmark
+package trood
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

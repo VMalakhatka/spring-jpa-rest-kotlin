@@ -25,8 +25,8 @@ class ProjectEntity (
         @Enumerated(EnumType.STRING) // Storing an enumeration value as a string
     @Column(nullable = false)
     @NotNull(message = "The position for the vacancy is required")
-    val field: Field,
+        var field: Field,
         @field:Size(max = 2500, message = "Текст не должен превышать 2500 символов")
     @Column(nullable = false, length = 2500) // length specifies a restriction at the database level
-    val description: String
+        var description: String
 )

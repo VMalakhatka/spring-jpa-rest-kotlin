@@ -1,4 +1,4 @@
-package ru.devmark.model
+package trood.model
 
 class NameOnly (
     var name: String,

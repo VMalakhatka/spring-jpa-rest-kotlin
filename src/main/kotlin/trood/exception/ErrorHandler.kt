@@ -1,4 +1,4 @@
-package ru.devmark.exception
+package trood.exception
 
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ControllerAdvice
