@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "d4e5e9ca-1760-4b01-ad4b-3039bc2f10e1",
+		"name": "Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32654793"
+	},
+	"item": [
+		{
+			"name": "Get /projects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kotlin-rest-api-e5bf80c4b125.herokuapp.com/projects",
+					"protocol": "https",
+					"host": [
+						"kotlin-rest-api-e5bf80c4b125",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST  /projects",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"name\": \"Project VIDEOREDACTOR\",\n    \"experience\": 4,\n    \"deadline\": \"2026-01-14\",\n    \"field\": \"VIDEOREDACTOR\",\n    \"description\": \"A new technologies.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kotlin-rest-api-e5bf80c4b125.herokuapp.com/projects",
+					"protocol": "https",
+					"host": [
+						"kotlin-rest-api-e5bf80c4b125",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /projects/2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n        \"name\": \"Project VIDEOREDACTOR\",\n        \"experience\": 4,\n        \"deadline\": \"2026-01-14\",\n        \"field\": \"ADMIN\",\n        \"description\": \"A new technologies.\"\n    },",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kotlin-rest-api-e5bf80c4b125.herokuapp.com/projects/2",
+					"protocol": "https",
+					"host": [
+						"kotlin-rest-api-e5bf80c4b125",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL /projects/5",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kotlin-rest-api-e5bf80c4b125.herokuapp.com/projects/5",
+					"protocol": "https",
+					"host": [
+						"kotlin-rest-api-e5bf80c4b125",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
