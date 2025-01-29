@@ -1,28 +1,28 @@
-#spring:
-#  datasource:
-#    driver-class-name: org.postgresql.Driver
-#    url: jdbc:postgresql://localhost:5432/trood
-#    username: postgres
-#    password: "1"
-#  jpa:
-#    hibernate:
-#      ddl-auto: update # Hibernate will create and update the tables itself
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
-#        show_sql: true
-#        temp:
-#          use_jdbc_metadata_defaults: false
 spring:
   datasource:
-    url: ${DATABASE_URL}
     driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/trood
+    username: postgres
+    password: "1"
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: update # Hibernate will create and update the tables itself
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         show_sql: true
-server:
-  port: ${PORT:8080}
+        temp:
+          use_jdbc_metadata_defaults: false
+#spring:
+#  datasource:
+#    url: ${DATABASE_URL}
+#    driver-class-name: org.postgresql.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        show_sql: true
+#server:
+#  port: ${PORT:8080}

@@ -3,11 +3,10 @@ package trood.entity
 import jakarta.persistence.*
 import jakarta.validation.constraints.*
 import trood.service.Field
-import java.time.LocalDate
 
 @Entity
-@Table(name = "projects")
-class ProjectEntity(
+@Table(name = "vacancy")
+class VacancyEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Int =0,
@@ -17,31 +16,20 @@ class ProjectEntity(
     var name: String,
     @field:Min(value = 0, message = "Experience can't be negative")
     @field:Max(value = 150, message = "Experience cannot be more than 50")
-    var experience: Int,
-    @Column(nullable = false)
-    @field:NotNull(message = "The date cannot be blank")
-    @field:Future(message = "The date must be in the future")
-    var deadline: LocalDate,
+    var experience : Int,
     @Enumerated(EnumType.STRING) // Storing an enumeration value as a string
     @Column(nullable = false)
     @NotNull(message = "The position for the vacancy is required")
     var field: Field,
+    @Column(nullable = false, length = 50)
+    @field:NotBlank(message = "A name can't be empty") // Checks that the string is not empty
+    @field:Size(max = 20, message = "Country cannot exceed 20 characters")
+    var country: String,
     @field:Size(max = 2500, message = "Текст не должен превышать 2500 символов")
     @Column(nullable = false, length = 2500) // length specifies a restriction at the database level
     var description: String,
 
-    @OneToMany (mappedBy = "project", cascade = [CascadeType.ALL], orphanRemoval = true)
-    var vacancies: MutableList<VacancyEntity> = mutableListOf()
-){
-    // Adding a vacancy
-    fun addVacancy(vacancy: VacancyEntity) {
-        vacancy.project = this // Making the connection
-        vacancies.add(vacancy)
-    }
-
-    // Deleting a vacancy
-    fun removeVacancy(vacancy: VacancyEntity) {
-        vacancies.remove(vacancy)
-        vacancy.project = null // Breaking the connection
-    }
-}
+    @ManyToOne
+    @JoinColumn(name = "project_id", nullable = false)
+    var project: ProjectEntity?
+)
