@@ -9,7 +9,7 @@ GET /projects - Get a list of projects.
 POST /projects - Create a new project.
 PUT /projects/:id - Edit a project.
 DELETE /projects/:id - Deleting a project.
-+
+___________
 Vacancies management (Optional - Additional Job):
 GET /projects/:id/vacancies - Retrieve a list of vacancies for a specific project.
 POST /projects/:id/vacancies - Add a job to a project.
@@ -25,5 +25,5 @@ with typed test data for PUT and POST requests
 
 aplication.yml - is configured to run on a remote server, so I do 
 not provide requirements for local launch.
-The project is currently running and available at the external link 
-- https://kotlin-rest-api-e5bf80c4b125.herokuapp.com/projects.
+The project is currently running and available at the external link
+https://kotlin-rest-api-e5bf80c4b125.herokuapp.com/projects.
