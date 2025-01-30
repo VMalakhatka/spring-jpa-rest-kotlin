@@ -1,5 +1,6 @@
 package trood.service.impl
 
+import jakarta.transaction.Transactional
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 import trood.entity.ProjectEntity
@@ -27,12 +28,12 @@ class ProjectServiceImpl(
                 ?:throw ProjectNotFoundException1(id)
 
 
-
+    @Transactional
     override fun create(dto: ProjectDto): Int {
         val projectEntity = projectsRepository.save(dto.toEntity())
         return projectEntity.id
     }
-
+    @Transactional
     override fun update(id: Int, dto: ProjectDto) {
         var existingProject = projectsRepository.findByIdOrNull(id)
                 ?: throw ProjectNotFoundException1(id)

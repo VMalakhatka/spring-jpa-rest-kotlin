@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "24176b02-5e4d-499f-bee3-141c96b7b37f",
+		"name": "Hiroku One To Many",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32654793"
+	},
+	"item": [
+		{
+			"name": "Get /projects Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/projects",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get /projects/2 Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/projects/3",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST  /projects/2 Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"name\": \"Project VIDEOREDACTOR\",\n    \"experience\": 4,\n    \"deadline\": \"2026-01-14\",\n    \"field\": \"VIDEOREDACTOR\",\n    \"description\": \"A new technologies.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/projects",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /projects/2 Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"name\": \"Project VITOR\",\n    \"experience\": 5,\n    \"deadline\": \"2026-03-14\",\n    \"field\": \"VIDEOREDACTOR\",\n    \"description\": \"A new______________ technologies.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/projects/4",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL /projects/2 Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/projects/5",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get /projects/3/vacancies Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/projects/3/vacancies",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects",
+						"3",
+						"vacancies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get /projects/3/vacancies/4 Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/projects/3/vacancies/4",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects",
+						"3",
+						"vacancies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get /vacancies/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/vacancies/4",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"vacancies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /projects/3/vacancies Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Manager\",\n    \"experience\": 12,\n    \"field\": \"DESIGN\",\n    \"country\": \"USA\",\n    \"description\": \"DESIGN strategist needed for brand development.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/projects/3/vacancies",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"projects",
+						"3",
+						"vacancies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /vacancies/8 Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"name\": \"Project VITOR\",\n    \"experience\": 5,\n    \"deadline\": \"2026-03-14\",\n    \"field\": \"VIDEOREDACTOR\",\n    \"description\": \"A new______________ technologies.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/vacancies/8",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"vacancies",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL /vacancies/7 Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Гjkedfия\",\n        \"population\": 9300,\n        \"cities\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://entity-one-to-many-db45078fbac9.herokuapp.com/vacancies/7",
+					"protocol": "https",
+					"host": [
+						"entity-one-to-many-db45078fbac9",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"vacancies",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

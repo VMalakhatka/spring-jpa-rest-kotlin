@@ -31,7 +31,7 @@ class VacancysServiseImpl(
             ?.toDto()
             ?: throw VacancyNotFoundExeption(vacancyId)
 
-
+    @Transactional
     override fun addVacancy(projectId: Int, vacancyDto: VacancyDto) {
         val projectEntity = projectsRepository.findByIdOrNull(projectId)?:throw ProjectNotFoundException1(projectId)
         projectEntity.addVacancy(projectMapper.toEntity(vacancyDto,projectEntity))
@@ -46,7 +46,7 @@ class VacancysServiseImpl(
         projectsRepository.save(existingProject)
         vacancyRepository.delete(existingVacancy)
     }
-
+    @Transactional
     override fun update(vacancyId: Int, vacancyDto: VacancyDto) {
         val vacancyEntity=vacancyRepository.findByIdOrNull(vacancyId)?:throw VacancyNotFoundExeption(vacancyId)
         vacancyEntity.name=vacancyDto.name
