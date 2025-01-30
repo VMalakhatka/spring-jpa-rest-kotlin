@@ -26,4 +26,4 @@ with typed test data for PUT and POST requests
 aplication.yml - is configured to run on a remote server, so I do 
 not provide requirements for local launch.
 The project is currently running and available at the external link
-https://kotlin-rest-api-e5bf80c4b125.herokuapp.com/projects.
+https://entity-one-to-many-db45078fbac9.herokuapp.com/projects
