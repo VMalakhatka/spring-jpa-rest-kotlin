@@ -51,52 +51,8 @@ class ProjectServiceImpl(
     }
 
     private fun ProjectEntity.toDto(): ProjectDto = mapper.toDto(this)
-//            ProjectDto(
-//                    id=this.id,
-//                    name=this.name,
-//                    experience=this.experience,
-//                    deadline=this.deadline,
-//                    field=this.field,
-//                    description=this.description,
-//                    vacancies = vacancies.map { it.toDto() }  // Convert vacancies list
-//            )
-
     private fun VacancyEntity.toDto(): VacancyDto = mapper.toDto(this)
-//             VacancyDto(
-//                id = id,
-//                name = name,
-//                experience = experience,
-//                field = field,
-//                country = country,
-//                description = description
-//            )
-
-
     private fun ProjectDto.toEntity(): ProjectEntity =mapper.toEntity(this)
-//
-//    {
-//        val projectEntity = ProjectEntity(
-//            id = 0,
-//            name = this.name,
-//            experience = this.experience,
-//            deadline = this.deadline,
-//            field = this.field,
-//            description = this.description
-//        )
-//        // Linking vacancies to the project
-//        projectEntity.vacancies = this.vacancies.map { it.toEntity(projectEntity) }.toMutableList()
-//
-//        return projectEntity
-//    }
     fun VacancyDto.toEntity(inProject: ProjectEntity): VacancyEntity = mapper.toEntity(this,inProject)
-//        VacancyEntity(
-//            id = 0,
-//            name = this.name,
-//            experience = this.experience,
-//            field = this.field,
-//            country = this.country,
-//            description = this.description,
-//            project = inProject,
-//        )
 
 }
