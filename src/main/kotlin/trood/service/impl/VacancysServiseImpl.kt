@@ -49,13 +49,14 @@ class VacancysServiseImpl(
     @Transactional
     override fun update(vacancyId: Int, vacancyDto: VacancyDto) {
         val vacancyEntity=vacancyRepository.findWithProjectById(vacancyId)?:throw VacancyNotFoundExeption(vacancyId)
-       // val projectEntity = vacancyEntity.project
+        val projectEntity = vacancyEntity.project?:throw ProjectNotFoundException1(vacancyId)
         vacancyEntity.name=vacancyDto.name
         vacancyEntity.field=vacancyDto.field
         vacancyEntity.experience=vacancyDto.experience
         vacancyEntity.description=vacancyDto.description
         vacancyEntity.country=vacancyDto.country
-        vacancyRepository.save(vacancyEntity)
+        //vacancyRepository.save(vacancyEntity)
+        projectsRepository.save(projectEntity)
     }
 
     fun VacancyEntity.toDto():VacancyDto= projectMapper.toDto(this)
